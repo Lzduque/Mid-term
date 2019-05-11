@@ -10,7 +10,7 @@ const bodyParser     = require("body-parser");
 const sass           = require("node-sass-middleware");
 const app            = express();
 const bcrypt         = require('bcrypt'); // to encrypt code
-const { Client }      = require('pg');
+const { Client }     = require('pg');
 
 const knexConfig     = require("./knexfile");
 const knex           = require("knex")(knexConfig[ENV]);

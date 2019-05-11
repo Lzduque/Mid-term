@@ -7,12 +7,12 @@ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
-      host     : process.env.DATABASE_URL,
-      user     : process.env.DATABASE_URL,
-      password : process.env.DATABASE_URL,
-      database : process.env.DATABASE_URL,
-      port     : process.env.DATABASE_URL,
-      ssl      : process.env.DATABASE_URL
+      host     : process.env.DB_HOST,
+      user     : process.env.DB_USER,
+      password : process.env.DB_PASS,
+      database : process.env.DB_NAME,
+      port     : process.env.DB_PORT,
+      ssl      : process.env.DB_SSL
     },
     migrations: {
       directory: './db/migrations',

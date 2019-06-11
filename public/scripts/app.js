@@ -97,18 +97,14 @@ const handleSubmit = (event) => {
 
 
 const loadItems = function() {
-  console.log('loading items');
-  $.ajax({
-    url: '/api/users/list/items',
-    type: 'GET',
-    success: function(data) {
+  $.get('/api/users/list/items', function(data) {
+
     console.log('data from loadItems: ', data);
     console.log('data from textarea: ',$('textarea#newItem').val(''));
     $('#newItem').val('');
 
     renderItems(data);
-    }
-  })
+  });
 };
 
 
